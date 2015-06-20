@@ -23,8 +23,12 @@ public class getLocation extends AsyncTask<Void, Void, Boolean> {
     }
 
 
-    // Given a string representation of a URL, sets up a connection and gets
-// an input stream.
+    /**
+     * Given a string representation of a URL, sets up a connection and gets an input stream.
+     * @param urlString String
+     * @return InputSteam
+     * @throws IOException
+     */
     private InputStream downloadUrl(String urlString) throws IOException {
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();

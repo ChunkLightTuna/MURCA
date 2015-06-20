@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         int rotation = getWindowManager().getDefaultDisplay().getRotation();
 
 
-
         if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
             background.getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
             background.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -39,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
             background.getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
             background.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
         }
-
-
 
 
         last = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
