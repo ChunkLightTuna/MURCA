@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MURCA</string>
+    <string name="first_run">You have not checked if this is America.</string>
+    <string name="previously_free">The last time you checked, this is America.</string>
+    <string name="previously_not_free">The last time you checked, this is not America.</string>
+    <string name="free">Yes, this is America.</string>
+    <string name="not_free">No, this is not America.</string>
+    <string name="action_settings">Settings</string>
+    <string name="check_freedoms">Check</string>
+</resources>
