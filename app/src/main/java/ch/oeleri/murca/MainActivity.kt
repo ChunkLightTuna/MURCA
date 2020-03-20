@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         private const val checked = "checked"
     }
 
-    private var last: SharedPreferences? = null
+    private lateinit var last: SharedPreferences
     private var hasChecked = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         last = PreferenceManager.getDefaultSharedPreferences(applicationContext)
 
-        if (last!!.contains(isFree)) {
-            val free = last!!.getBoolean(isFree, false)
+        if (last.contains(isFree)) {
+            val free = last.getBoolean(isFree, false)
 
             if (!hasChecked) {
                 val freedomStatus = findViewById<TextView>(R.id.freedom_status)
@@ -72,13 +72,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkForFreedom(view: View) {
-        getLocation(this@MainActivity).execute()
+        GetLocation(this@MainActivity).execute()
     }
 
     fun setFreedom(free: Boolean) {
         findViewById<Button>(R.id.check_button).visibility = View.GONE
 
-        val editor = last!!.edit()
+        val editor = last.edit()
         editor.putBoolean(isFree, free)
         editor.apply()
         val freedomStatus = findViewById<TextView>(R.id.freedom_status)

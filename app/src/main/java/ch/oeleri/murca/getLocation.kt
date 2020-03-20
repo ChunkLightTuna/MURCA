@@ -13,7 +13,7 @@ import java.net.URL
 /**
  * Created by Chris Oelerich on 6/15/15.
  */
-class getLocation internal constructor(@field:SuppressLint("StaticFieldLeak") private val mActivity: MainActivity) : AsyncTask<Void?, Void?, Boolean>() {
+class GetLocation internal constructor(@field:SuppressLint("StaticFieldLeak") private val mActivity: MainActivity) : AsyncTask<Void?, Void?, Boolean>() {
 
     /**
      * Given a string representation of a URL, sets up a connection and gets an input stream.
